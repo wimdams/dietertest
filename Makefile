@@ -10,7 +10,7 @@ main.exe: main.c
 	gcc main.c -o main.exe 
     
 test.o: test.c
-	gcc -c test.c -o test.o
+	gcc -c test.c -o test.o -Icmocka
     
 cmocka.o: cmocka/cmocka.c
 	gcc cmocka.c -o cmocka.o -Icmocka
