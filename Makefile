@@ -10,10 +10,10 @@ main.exe: main.c
 	gcc main.c -o main.exe 
     
 test.o: test.c
-	gcc -c test.c -o test.o -Icmocka
+	gcc -c test.c -o test.o -I./cmocka
     
 cmocka.o: cmocka/cmocka.c
-	gcc cmocka/cmocka.c -o cmocka.o -Icmocka
+	gcc cmocka/cmocka.c -o cmocka.o -I./cmocka
 	
 testsuite.exe: test.o cmocka.o
 	gcc test.o cmocka.o -o testsuite.exe
