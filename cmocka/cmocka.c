@@ -15,6 +15,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+//WDA
+#define HAVE_MALLOC_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_SIGNAL_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_CLOCK_REALTIME 1
+#define HAVE_SIGLONGJMP 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_STRUCT_TIMESPEC 1
+//end WDA
+ 
+ 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
