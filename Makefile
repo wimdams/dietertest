@@ -13,7 +13,7 @@ test.o: test.c
 	gcc -c test.c -o test.o -Icmocka
     
 cmocka.o: cmocka/cmocka.c
-	gcc cmocka.c -o cmocka.o -Icmocka
+	gcc cmocka/cmocka.c -o cmocka.o -Icmocka
 	
 testsuite.exe: test.o cmocka.o
 	gcc test.o cmocka.o -o testsuite.exe
