@@ -12,11 +12,14 @@ main.exe: main.c
 test.o: test.c
 	gcc -c test.c -o test.o
     
-testsuite.exe: test.o 
-	gcc test.o -lcmocka -o testsuite.exe
+cmocka.o: cmocka/cmocka.c
+	gcc cmocka.c -o cmocka.o -Icmocka
+	
+testsuite.exe: test.o cmocka.o
+	gcc test.o cmocka.o -o testsuite.exe
     
 runtest: testsuite.exe main.exe
-	export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib" && ./testsuite.exe
+	./testsuite.exe
 
 clean:
 	rm -rf *.o *.exe
