@@ -1,6 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+int mag_niet=1;	//AST error Error_Global_vars_used
+
+void stoute_functie(int getal){
+	while(1){	//AST error Error_while_loop_uses_constant_in_condition 
+		if(getal==0){
+			break;
+		}
+		getal--;
+	}
+	while(1==getal){	//NO AST error !
+		if(getal==0){
+			break;
+		}
+		getal--;
+	}
+}
+
 int main(void)
 {
     float num1, num2, res;
